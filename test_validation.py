@@ -28,3 +28,5 @@ def test_01():
         func1(data)
     print(str(exc.value))
     # assert (str(exc.value)) == "Value Error at func1"
+    
+test_01()
