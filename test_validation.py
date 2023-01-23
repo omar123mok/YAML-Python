@@ -4,10 +4,8 @@ import pytest
 
 # pip install pyyaml
 def func1(data):
-    ''' Tests for the format of code'''
     for item in data:
-        print(item)
-        assert 'kkkk Name' in item, f'Missing key: First Name in {item}'
+        assert 'lkk Name' in item, f'Missing key: First Name in {item}'
         assert 'Last Name' in item, f'Missing key: Last Name in {item}'
         assert 'Gender' in item, f'Missing key: Gender in {item}'
         assert 'Tags' in item, f'Missing key: Tags in {item}'
@@ -18,15 +16,15 @@ def func1(data):
 
 
 def test_01():
-    ''' Reads the data.yaml file'''
     with open("data.yaml", 'r') as x:
-        data = x
+        data=x
     with pytest.raises(Exception) as exc:
-        data = yaml.safe_load(x)
+        data=yaml.safe_load(x)
 
     with pytest.raises(Exception) as exc:
         func1(data)
     print(str(exc.value))
-    # assert (str(exc.value)) == "Value Error at func1"
-    
+    assert (str(exc.value)) == "Value Error at func1"
+
 test_01()
+
