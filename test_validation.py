@@ -5,7 +5,7 @@ import pytest
 # pip install pyyaml
 def func1(data):
     for item in data:
-        assert 'lkk Name' in item, f'Missing key: First Name in {item}'
+        assert 'lkk' in item, f'Missing key: First Name in {item}'
         assert 'Last Name' in item, f'Missing key: Last Name in {item}'
         assert 'Gender' in item, f'Missing key: Gender in {item}'
         assert 'Tags' in item, f'Missing key: Tags in {item}'
