@@ -7,7 +7,7 @@ def func1(data):
     ''' Tests for the format of code'''
     for item in data:
         print(item)
-        assert 'First Name' in item, f'Missing key: First Name in {item}'
+        assert 'kkkk Name' in item, f'Missing key: First Name in {item}'
         assert 'Last Name' in item, f'Missing key: Last Name in {item}'
         assert 'Gender' in item, f'Missing key: Gender in {item}'
         assert 'Tags' in item, f'Missing key: Tags in {item}'
