@@ -10,6 +10,6 @@ jobs:
       uses: actions/checkout@v2
     - name: Run validation script
       run: |
-          pip install pytest
-          pip install pyaml
+          pip install pytest --quiet 
+          pip install pyaml --quiet 
           pytest -k test_validation.py
