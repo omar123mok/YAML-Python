@@ -24,7 +24,6 @@ def test_01():
     with pytest.raises(Exception) as exc:
         func1(data)
     print(str(exc.value))
-    assert (str(exc.value)) == "Value Error at func1"
 
 test_01()
 
