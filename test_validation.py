@@ -2,12 +2,14 @@ import yaml
 import pytest
 
 
-with open("data.yaml", 'r') as x:
-    data = yaml.safe_load(x)
+def load():
+    with open("data.yaml", 'r') as x:
+        data = yaml.safe_load(x)
+    return data
    
 
-def test_func1(data):
-    print(data)
+def test_func1():
+    data=load()
     for item in data:
         assert 'First Name' in item, f'Missing key: First Name in {item}'
         assert 'Last Name' in item, f'Missing key: Last Name in {item}'
