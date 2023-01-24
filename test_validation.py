@@ -1,9 +1,10 @@
 import yaml
 import pytest
 
-
+with open("data.yaml", 'r') as x:
+    data = yaml.safe_load(x)
 # pip install pyyaml
-def func1(data):
+def test_func1(data):
     for item in data:
         assert 'First Name' in item, f'Missing key: First Name in {item}'
         assert 'Last Name' in item, f'Missing key: Last Name in {item}'
@@ -13,12 +14,3 @@ def func1(data):
         assert item['Last Name'], f'Missing value for key: Last Name in {item}'
         assert item['Gender'], f'Missing value for key: Gender in {item}'
         assert item['Tags'], f'Missing value for key: Tags in {item}'
-
-
-def test_01():
-    with open("data.yaml", 'r') as x:
-        data = yaml.safe_load(x)
-
-    # with pytest.raises(Exception) as exc:
-    func1(data)
-    # print(str(exc.value))
