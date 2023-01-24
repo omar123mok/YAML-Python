@@ -4,7 +4,7 @@ import pytest
 
 # pip install pyyaml
 
-def test_func1(data):
+def test_func1():
     with open("data.yaml", 'r') as x:
         data = yaml.safe_load(x)
     for item in data:
