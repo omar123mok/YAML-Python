@@ -2,8 +2,8 @@ import yaml
 import pytest
 
 
- with open("data.yaml", 'r') as x:
-      data = yaml.safe_load(x)
+with open("data.yaml", 'r') as x:
+    data = yaml.safe_load(x)
    
 
 def test_func1(data):
@@ -17,4 +17,3 @@ def test_func1(data):
         assert item['Last Name'], f'Missing value for key: Last Name in {item}'
         assert item['Gender'], f'Missing value for key: Gender in {item}'
         assert item['Tags'], f'Missing value for key: Tags in {item}'
-
