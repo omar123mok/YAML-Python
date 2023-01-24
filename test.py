@@ -1,15 +1,22 @@
 import yaml
 
-def validate_keys(data):
-    required_keys = ["First Name", "Last Name", "Gender", "Tags"]
+required_keys = ["firstname", "lastname", "gender", "tags"]
     missing_keys = []
+    data_keys = []
+    # print(data)
+    for k in data.keys():
+        k=k.replace(" ","")
+        k=k.lower()
+        data_keys.append(k)
+    # print(data_keys)
     for key in required_keys:
-        if key not in data.keys():
+        if key not in data_keys:
             missing_keys.append(key)
     if len(missing_keys) > 0:
-        print("The following keys are missing: ", missing_keys)
+        print(f"The following keys are missing: {missing_keys} for data at list {count}")
     else:
-        print("All required keys are present.")
+        print(f"All required keys are present for data at list index {count}")
+    count+=1
         
 def validate_values(data):
     missing_values = {}
@@ -17,9 +24,10 @@ def validate_values(data):
         if not value:
             missing_values[key] = "Value is missing"
     if len(missing_values) > 0:
-        print("The following values are missing: ", missing_values)
+        print(f"The following values are missing: {missing_values} for data at list {count}")
     else:
-        print("All values are present.")
+        print(f"All values are present for data at list index {count}")
+    count+=1
         
 with open("data.yaml", 'r') as x:
     data = yaml.safe_load(x)
