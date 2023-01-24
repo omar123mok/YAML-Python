@@ -4,6 +4,8 @@ import pytest
 with open("data.yaml", 'r') as x:
     data = yaml.safe_load(x)
 # pip install pyyaml
+
+@pytest.mark.parametrize('data', data)
 def test_func1(data):
     for item in data:
         assert 'First Name' in item, f'Missing key: First Name in {item}'
