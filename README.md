@@ -4,7 +4,7 @@ This repository contains a validadasdsadtion script and GitHub Actions workflow 
 # File Structure
 data.yaml: Example YAML file containing data to be validated.11
 test_validation.py: Python script that validates data in the YAML file.
-.github/workflows/validate.yaml: GitHub Actions workflow that runs the validation script on push.
+.github/workflows/validate.yaml: GitHub Actions workflow that runs1 the validation script on push.
 Script Functionality
 The validation script test_validation.py contains a function func1(data) that checks for the presence of the following keys and values in each item of the data:
 
