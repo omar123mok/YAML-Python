@@ -1,8 +1,5 @@
 name: run-validator
-on:
-  pull_request:
-    branches:
-      - master
+on: push
 
 jobs:
  run-validator:
