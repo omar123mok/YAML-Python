@@ -18,8 +18,5 @@ jobs:
           
       - name: Commit Status Success
         if: ${{ true && true && ( github.event.pull_request.user.login == 'eis-refarch15' || github.event.pull_request.user.login == 'omar123mok') }}
-        uses: actions/github-script@v5
-        steps:
-         - name: making
-           run: echo "PR creator = ${{ github.event.pull_request.user.login }}"
+        run: echo "PR creator = ${{ github.event.pull_request.user.login }}"
       
