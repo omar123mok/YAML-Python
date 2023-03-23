@@ -1,5 +1,5 @@
 # Data Validation
-This repository contains a validadasdsadtion script and GitHub Actions workflow to validate data in a YAML file.
+This repository contains a validadasdsadtion script and GitHub Actions workflow to validate data in a YAML file.1
 
 # File Structure
 data.yaml: Example YAML file containing data to be validated.11
