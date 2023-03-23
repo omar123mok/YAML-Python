@@ -1,5 +1,5 @@
 name: run-validator
-on: push
+on: pull_request
 
 jobs:
  run-validator:
