@@ -2,7 +2,7 @@ import yaml
 
 required_keys = ["firstname", "lastname", "gender", "tags"]
     missing_keys = []
-    data_keys = []
+    data_keys =[]
     # print(data)
     for k in data.keys():
         k=k.replace(" ","")
